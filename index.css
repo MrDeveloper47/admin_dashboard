@@ -1,0 +1,183 @@
+body{
+    padding: 0;
+    margin: 0;
+    overflow-x:hidden ;
+}
+
+#conatiner{
+    background: #ddd;
+    height: 100vh;
+}
+
+#sidenev{
+
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-image: radial-gradient( circle 860px at 11.8% 33.5%,  rgba(240,30,92,1) 0%, rgba(244,49,74,1) 30.5%, rgba(249,75,37,1) 56.1%, rgba(250,88,19,1) 75.6%, rgba(253,102,2,1) 100.2% );
+    width: 250px;
+    height: 100%;
+}
+
+
+#section{
+
+    background:white;
+    width: calc(100% - 250px);
+    height: 100vh;
+    margin-left: 250px;
+}
+
+#section #topnav{
+    position: fixed;
+    left: 250px;
+    top: 0;
+    width: calc(100% - 250px);
+    background-image: radial-gradient( circle 610px at 5.2% 51.6%,  rgba(5,8,114,1) 0%, rgba(7,3,53,1) 97.5% );
+    padding:24px;
+   
+
+}
+
+#togler{
+    width: 38px;
+    height: 38px;
+    background: white;
+    border: none;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+}
+
+#brand-name{
+font-family: sans-serif;
+color: white;
+padding: 0;
+margin: 0;
+
+}
+
+#toolbar{
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+#sidenav-menu{
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    gap: 8px;
+}
+
+#sidenav-menu button{
+    border: none;
+    padding: 12px 0px;
+    background-color: white;
+    font-family: sans-serif;
+    
+}
+
+#sidenav-menu button:hover{
+    background-color:darkorange;
+    color: black;
+    cursor: pointer;
+
+}
+
+#content{
+    padding:60px  30px;
+}
+
+#register{
+    display: none;
+}
+
+#login{
+    display: none;
+}
+
+#card{
+    width :350px;
+    box-shadow: 0 0 10px 0 #ddd;
+    padding: 24px;
+   
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+    
+}
+form button [type="submit"]
+{
+    border: none;
+    padding:10px;
+    background: darkorange;
+    color: white;
+}
+
+
+input{
+
+    border: ipx solid #ccc;
+    padding: 10px;
+}
+
+input:focus{
+    outline: none;
+}
+
+#message, #mobmessage, #emailmessage, #pasmessage , #email-message, #password-message{
+
+    display: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+#ppassword{
+    
+    position: relative;
+}
+
+#ppassword button{
+
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: none;
+    background-color: white;
+}
+
+#ppassword input{
+    width: 93%;
+}
+
+
+@media(max-width:768px)
+{
+    #sidenav{
+        width: 0;
+    }
+    #section{
+        width: 100%;
+    }
+    #section{
+        margin-left: 0px;
+    }
+    #section #topnav{
+        left:0px;
+        width:100%;
+    
+    }
+    #togler{
+        display: block;
+    }
+    
+}

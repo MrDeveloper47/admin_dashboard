@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.3/css/all.min.css" />
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js"></script>
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <div id="conatiner">
+<div id="sidenev">
+<div id="sidenav-menu">
+    <button id="reg-btn" onclick="regsiterclick('reg-btn','login-btn','register', 'login')">Register</button>
+    <button id="login-btn" onclick="regsiterclick('login-btn','reg-btn','login', 'register')">Login</button>
+</div>
+
+</div>
+<div id="section">
+    <nav id="topnav">
+        <div id="toolbar">
+<button onclick="toggle()" id="togler"><i class="fa fa-bars"></i></button>
+<h1 id="brand-name">DASHBOARD</h1>
+</div>
+    </nav>
+    <div id="content">
+        <div id="register">
+             <h1>Register</h1> 
+             <div id="card">
+                <form name="signupForm" onsubmit="signup(event)">
+                   
+                    <input type="text"  name="name" placeholder="@username" oninput="nameinput(this,'message')"/>
+                    <p id="message"></p>
+                    
+                    <input type="number" name="mob" placeholder="Mobile"  oninput="mobinput(this,'mobmessage')" />
+                    <p id="mobmessage"></p>
+                    
+                    <input type="email" name="email" placeholder="example@gmail.com"   oninput="emailinput(this,'emailmessage')" />
+                    <p id="emailmessage"></p>
+                    <div id="ppassword">
+                    <input id="signuppassword" type="password" name="pass" placeholder="***************" oninput="passinput(this,'pasmessage')" />
+                <button type="button" onclick="togglePassword('signuppassword','signeye')">
+                    <i class="fa fa-eye" id="signeye"></i>
+                </button>
+                </div>
+                    <p id="pasmessage"></p>
+                    
+                    <button type="submit">Register</button>
+                </form>
+                
+            </div>
+            </div>
+        <div id="login">
+             <h1>Login</h1> 
+             <div id="card">
+                <form name="loginForm" onsubmit="login(event)">
+                    <input type="email" name="lemail" placeholder="email"  oninput="emailinput(this,'emailmessage')"/>
+                    <p id="email-message"></p>
+                    <div id="ppassword">
+                        <input id="loginpassword" type="password" name="pass" placeholder="***************" oninput="passinput(this,'password-message')" />
+                        <p id="password-message"></p>
+                    <button type="button" onclick="togglePassword('loginpassword','logineye')">
+                        <i class="fa fa-eye" id="logineye"></i>
+                    </button>
+                    </div>
+                    <button type="submit" >Login</button>
+                </form>
+
+             </div>
+            </div>
+    </div>
+</div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
